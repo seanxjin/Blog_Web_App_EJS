@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs") %>
+
+<div class="d-flex flex-row justify-content-center w-100">
+  <form action="/submit" method="POST" class="mt-5 w-75">
+    <!-- Title -->
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" name="title" placeholder="title" class="form-control" />
+    </div>
+
+    <!-- Author -->
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" name="author" placeholder="name" class="form-control" />
+    </div>
+
+    <!-- Date -->
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="text" name="date" placeholder="yy/mm/dd" class="form-control" />
+    </div>
+
+    <!-- Blog Content -->
+    <div class="mb-3">
+      <label for="content" class="form-label">Content</label>
+      <textarea class="form-control" name="content" placeholder="write your blog here..." rows="6"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+     <button class="btn" style="background-color: #002B5B; color: white;" type="submit">Submit</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

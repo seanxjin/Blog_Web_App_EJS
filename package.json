@@ -1,0 +1,24 @@
+{
+  "name": "blog-web-app",
+  "version": "1.0.0",
+  "description": "A simple web blog application that allows users to post, delete, and add blogs to their website",
+  "homepage": "https://github.com/seanxjin/Blog_Web_App_EJS#readme",
+  "bugs": {
+    "url": "https://github.com/seanxjin/Blog_Web_App_EJS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanxjin/Blog_Web_App_EJS.git"
+  },
+  "license": "ISC",
+  "author": "Sean Jin",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
