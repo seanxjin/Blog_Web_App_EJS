@@ -1,6 +1,16 @@
-<%- include("partials/header.ejs") %>
+<%- include("partials/header.ejs") %> <% if (Object.keys(locals).length > 0) {
+%>
+<div>
+  <% Object.keys(locals).forEach(element => { %>
+  <div>
+    <h3><%= element.title %></h3>
+  </div>
+  <% }); %>
+</div>
 
+<% } else if ({:condition}) { %>
 
-
-
-<%- include("partials/footer.ejs") %>
+<div>
+  <h1>No Blogs Created Yet.</h1>
+</div>
+<% } %> <%- include("partials/footer.ejs") %>
