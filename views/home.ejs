@@ -1,16 +1,27 @@
-<%- include("partials/header.ejs") %> <% if (Object.keys(locals).length > 0) {
-%>
-<div>
-  <% Object.keys(locals).forEach(element => { %>
-  <div>
-    <h3><%= element.title %></h3>
+<%- include("partials/header.ejs") %>
+
+<%- include("partials/navbar.ejs") %>
+<div id="homepage-container">
+
+  <% blogs.forEach(blog => { %>
+  <div class="blog-item">
+    <a href="/configure/<%= blog.id %>">
+      <h1><%= blog.title %></h1>
+    </a>
+    <p><%= blog.date %></p>
+    <% if (blog.content.length >= 500) { %>
+        <p><%= blog.content.substring(0, 500)%>...</p>
+    <% } else { %>
+        <p><%= blog.content %></p>
+    <% } %>
+    <hr>
   </div>
   <% }); %>
+
 </div>
 
-<% } else if ({:condition}) { %>
 
-<div>
-  <h1>No Blogs Created Yet.</h1>
-</div>
-<% } %> <%- include("partials/footer.ejs") %>
+
+
+
+<%- include("partials/footer.ejs") %>

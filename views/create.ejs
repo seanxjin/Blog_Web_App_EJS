@@ -1,60 +1,16 @@
 <%- include("partials/header.ejs") %>
 
-<div class="d-flex flex-row justify-content-center w-100">
-  <form action="/createblog/submit" method="POST" class="mt-5 w-75">
-    <!-- Title -->
-    <div class="mb-3">
-      <label for="title" class="form-label">Title</label>
-      <input
-        type="text"
-        name="title"
-        placeholder="title"
-        class="form-control"
-      />
-    </div>
+<%- include("partials/navbar.ejs") %>
+<form action="/submit" method="post">
+  <label for="blog-title">
+    <h1>Title:</h1>
+  </label>
+  <input type="text" id="blog-title" name="blog-title" placeholder="Blog Title">
 
-    <!-- Author -->
-    <div class="mb-3">
-      <label for="author" class="form-label">Author</label>
-      <input
-        type="text"
-        name="author"
-        placeholder="name"
-        class="form-control"
-      />
-    </div>
-
-    <!-- Date -->
-    <div class="mb-3">
-      <label for="date" class="form-label">Date</label>
-      <input
-        type="text"
-        name="date"
-        placeholder="yy/mm/dd"
-        class="form-control"
-      />
-    </div>
-
-    <!-- Blog Content -->
-    <div class="mb-3">
-      <label for="content" class="form-label">Content</label>
-      <textarea
-        class="form-control"
-        name="content"
-        placeholder="write your blog here..."
-        rows="6"
-      ></textarea>
-    </div>
-
-    <!-- Submit Button -->
-    <button
-      class="btn"
-      style="background-color: #002b5b; color: white"
-      type="submit"
-    >
-      Submit
-    </button>
-  </form>
-</div>
+  <label for="blog-content">
+    <h1>Blog:</h1>
+  </label>
+  <textarea id="blog-content" name="blog-content" rows="5" cols="40" placeholder="write away ..."></textarea>
+</form>
 
 <%- include("partials/footer.ejs") %>
