@@ -42,6 +42,28 @@ async function getBlogs() {
     return blogs;
 }
 
+async function addBlog(title, content) {
+    const date = new Date();
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const dd = String(date.getDate()).padStart(2, "0");
+    const formattedDate = `${yyyy}-${mm}-${dd}`;
+    await db.query("SELECT setval('blogs_id_seq', (SELECT MAX(id) FROM blogs))");
+    await db.query(`INSERT INTO blogs (
+            date,
+            title,
+            content
+        ) VALUES (
+            $1, $2, $3
+        );`, [formattedDate, title, content]);
+}
+
+async function findBlog(id) {
+    let blog = await db.query(`SELECT * FROM blogs WHERE id = $1`, [id]);
+    blog = blog.rows[0];
+    return blog;
+}
+
 
 
 app.get("/", async (req, res) => {
@@ -51,10 +73,24 @@ app.get("/", async (req, res) => {
     });
 });
 
-app.get("/create", (req, res) => {
+app.get("/create", async (req, res) => {
     res.render("create.ejs");
 });
 
+app.post("/submit", async (req, res) => {
+    const title = req.body.blogTitle;
+    const content = req.body.blogContent;
+    await addBlog(title, content);
+    res.redirect("/");
+});
+
+app.get("/configure/:id", async (req, res) => {
+    const blogId = parseInt(req.params.id);
+    const blog = await findBlog(blogId);
+    res.render("individualBlog.ejs", {
+        blog: blog
+    });
+});
 
 app.listen(port, () => {
     console.log("Listening on port: " + port);

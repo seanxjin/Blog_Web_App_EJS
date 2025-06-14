@@ -2,15 +2,16 @@
 
 <%- include("partials/navbar.ejs") %>
 <form action="/submit" method="post">
-  <label for="blog-title">
-    <h1>Title:</h1>
-  </label>
-  <input type="text" id="blog-title" name="blog-title" placeholder="Blog Title">
-
-  <label for="blog-content">
-    <h1>Blog:</h1>
-  </label>
-  <textarea id="blog-content" name="blog-content" rows="5" cols="40" placeholder="write away ..."></textarea>
-</form>
+    <label for="blog-title">
+      <h1>Title:</h1>
+    </label>
+    <input type="text" id="blog-title" name="blogTitle">
+  
+    <label for="blog-content">
+      <h1>Blog:</h1>
+    </label>
+    <textarea id="blog-content" name="blogContent" rows="5" cols="40"></textarea>
+    <button type="submit">Create Blog!</button>
+  </form>
 
 <%- include("partials/footer.ejs") %>

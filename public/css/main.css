@@ -90,7 +90,10 @@ h1 {
 }
 
 #homepage-container {
-    background-color: rgba(0, 0, 0, 0.5);
+    background:
+        linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
+        linear-gradient(127deg, rgba(140, 0, 255, 0.3), rgba(140, 0, 255, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0) 70.71%);
     position: relative;
     left: 10rem;
     top: 5rem;
@@ -136,25 +139,65 @@ form[action="/submit"] {
     top: 5rem;
     left: 10rem;
     width: 40rem;
-    height: 22rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background:
+        linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
+        linear-gradient(127deg, rgba(140, 0, 255, 0.3), rgba(140, 0, 255, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0) 70.71%);
     border-radius: 10px;
+    padding-bottom: 2rem;
 }
 
 form[action="/submit"] label {
+    padding-top: 1rem;
     color: antiquewhite;
     text-align: center;
+    opacity: 90%;
 }
 
 form[action="/submit"] input,
 form[action="/submit"] textarea {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     padding: 0;
-    border: 0;
     border-radius: 5px;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    border-width: 0.25rem;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 5px 5px black;
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+form[action="/submit"] button {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    border: 0;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
 }
 
 form[action="/submit"] * {
     display: block;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#individualBlog-container {
+    width: 41rem;
+    height: 30rem;
+    position: relative;
+    top: 2rem;
+    left: 10rem;
+    background:
+        linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
+        linear-gradient(127deg, rgba(140, 0, 255, 0.3), rgba(140, 0, 255, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0) 70.71%);
+    border-radius: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#individualBlog-container::-webkit-scrollbar {
+    width: 0;
 }
