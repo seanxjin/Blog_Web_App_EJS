@@ -184,8 +184,9 @@ form[action="/submit"] * {
 }
 
 #individualBlog-container {
-    width: 41rem;
+    width: 35rem;
     height: 30rem;
+    line-height: 1.5rem;
     position: relative;
     top: 2rem;
     left: 10rem;
@@ -196,8 +197,38 @@ form[action="/submit"] * {
     border-radius: 20px;
     overflow: hidden;
     overflow-y: scroll;
+    padding: 1rem 0.5rem 0rem 1rem;
+}
+
+#individualBlog-container h1,
+#individualBlog-container p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+
 }
 
 #individualBlog-container::-webkit-scrollbar {
     width: 0;
+}
+
+#edit-delete-container {
+    position: relative;
+    width: fit-content;
+    bottom: 20rem;
+    left: 47.5rem;
+}
+
+#edit-delete-container button {
+    width: 5rem;
+    border: 0;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 1rem 0 1rem 0;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    background:
+        linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
+        linear-gradient(127deg, rgba(140, 0, 255, 0.3), rgba(140, 0, 255, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0) 70.71%);
 }

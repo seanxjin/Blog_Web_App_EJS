@@ -7,7 +7,20 @@
     <p><%= blog.date %></p>
     <p><%= blog.content %></p>
 </div>
+<div id="edit-delete-container">
+    <form action="/delete" method="post">
+        <input type="hidden" name="id" value="<%= blog.id %>">
+        <button type="submit">Delete</button>
+    </form>
 
+    <form action="/edit" method="post">
+        <input type="hidden" name="id" value="<%= blog.id %>">
+        <input type="text" name="title" value="<%= blog.title %>" autocomplete="off" autofocus="true" hidden="true">
+        <input type="text" name="content" value="<%= blog.content %>" autocomplete="off" hidden="true">
+        <button type="submit" hidden><img src="/images/send.svg" alt="submit icon"></button>
+    </form>
+    <button onclick="handler()">Edit</button>
+</div>
 
 
 <%- include("partials/footer.ejs") %>
