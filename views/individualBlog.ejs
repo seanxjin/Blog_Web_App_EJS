@@ -3,24 +3,37 @@
 <%- include("partials/navbar.ejs") %>
 
 <div id="individualBlog-container">
-    <h1><%= blog.title %></h1>
-    <p><%= blog.date %></p>
-    <p><%= blog.content %></p>
+
+  <form action="/edit" method="post">
+    <h1 id="individualBlog-title"><%= blog.title %></h1>
+    <input type="hidden" name="updatedItemId" value="<%= blog.id %>">
+    <input id="input-title" type="text" name="updateItemTitle" value="<%= blog.title %>" autocomplete="off" autofocus="true" hidden>
+    <p id="individualBlog-date"><%= blog.date %></p>
+    <textarea id="input-content" name="updateItemContent" rows="13" cols="70" hidden><%= blog.content %></textarea>
+    <p id="individualBlog-content"><%= blog.content %></p>
+    <button id="submit-edit-btn" type="submit" hidden>Submit</button>
+  </form>
 </div>
 <div id="edit-delete-container">
-    <form action="/delete" method="post">
-        <input type="hidden" name="id" value="<%= blog.id %>">
-        <button type="submit">Delete</button>
-    </form>
-
-    <form action="/edit" method="post">
-        <input type="hidden" name="id" value="<%= blog.id %>">
-        <input type="text" name="title" value="<%= blog.title %>" autocomplete="off" autofocus="true" hidden="true">
-        <input type="text" name="content" value="<%= blog.content %>" autocomplete="off" hidden="true">
-        <button type="submit" hidden><img src="/images/send.svg" alt="submit icon"></button>
-    </form>
-    <button onclick="handler()">Edit</button>
+  <form action="/delete" method="post">
+    <input type="hidden" name="id" value="<%= blog.id %>">
+    <button id="delete-btn" type="submit">Delete</button>
+  </form>
+  <button id="edit" onclick="handler()">Edit</button>
 </div>
+
+
+<script>
+  function handler() {
+    document.getElementById('individualBlog-title').setAttribute('hidden', true);
+    document.getElementById('individualBlog-content').setAttribute('hidden', true);
+    document.getElementById('delete-btn').setAttribute('hidden', true);
+    document.getElementById('edit').setAttribute('hidden', true);
+    document.getElementById('input-title').removeAttribute('hidden');
+    document.getElementById('input-content').removeAttribute('hidden');
+    document.getElementById('submit-edit-btn').removeAttribute('hidden');
+  }
+</script>
 
 
 <%- include("partials/footer.ejs") %>

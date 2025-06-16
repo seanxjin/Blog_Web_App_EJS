@@ -159,9 +159,9 @@ form[action="/submit"] textarea {
     width: 90%;
     margin: 0 auto;
     padding: 0;
+    margin-top: 0.5rem;
     border-radius: 5px;
     font-size: 1.5rem;
-    margin-top: 0.5rem;
     border-width: 0.25rem;
     border-color: rgba(0, 0, 0, 0.1);
     box-shadow: 10px 5px 5px black;
@@ -204,7 +204,6 @@ form[action="/submit"] * {
 #individualBlog-container p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: antiquewhite;
-
 }
 
 #individualBlog-container::-webkit-scrollbar {
@@ -231,4 +230,36 @@ form[action="/submit"] * {
         linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
         linear-gradient(127deg, rgba(140, 0, 255, 0.3), rgba(140, 0, 255, 0) 70.71%),
         linear-gradient(336deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0) 70.71%);
+}
+
+#input-title,
+#input-content,
+#submit-edit-btn {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    border-width: 0.25rem;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 5px 5px black;
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+#input-title {
+    width: 32rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#input-content {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#input-content::-webkit-scrollbar {
+    width: 0;
+}
+
+#submit-edit-btn {
+    margin-top: 0.25rem;
+    font-weight: bold;
 }
