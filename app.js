@@ -1,8 +1,10 @@
 import express from "express";
 import pg from "pg";
+import env from "dotenv";
 
 const app = express();
 const port = 3000;
+env.config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -10,8 +12,8 @@ app.use(express.static("public"));
 const db = new pg.Client({
     user: "postgres",
     host: "localhost",
-    database: "bloggo",
-    password: "BestDBMS@0987",
+    database: process.env.DATABASE,
+    password: process.env.PASSWORD,
     port: 5432
 });
 
