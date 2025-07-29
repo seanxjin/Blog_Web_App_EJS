@@ -77,18 +77,6 @@ h1 {
     border-color: transparent;
 }
 
-#submit {
-    background-color: #87CEFA;
-    border-width: 1px 1px 1px 0;
-    border-radius: 0 10px 10px 0;
-    border-color: transparent;
-}
-
-#submit:hover {
-    background-color: antiquewhite;
-    cursor: pointer;
-}
-
 #homepage-container {
     background:
         linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
@@ -262,4 +250,82 @@ form[action="/submit"] * {
 #submit-edit-btn {
     margin-top: 0.25rem;
     font-weight: bold;
+}
+
+#mission-container {
+    display: block;
+    position: relative;
+    top: 5rem;
+    left: 10rem;
+    width: 40rem;
+    height: 25rem;
+    padding: 0rem 1.5rem;
+    border-radius: 10px;
+    background:
+        linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
+        linear-gradient(127deg, rgba(140, 0, 255, 0.3), rgba(140, 0, 255, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0) 70.71%);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#mission-container::-webkit-scrollbar {
+    width: 0;
+}
+
+#mission-title-container {
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    padding-top: 1rem;
+}
+
+#mission-body-container {
+    width: 40rem;
+    line-height: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    padding-top: 1rem;
+}
+
+#about-container {
+    display: block;
+    position: relative;
+    top: 5rem;
+    left: 10rem;
+    width: 40rem;
+    height: 25rem;
+    padding: 0rem 1.5rem;
+    border-radius: 10px;
+    background:
+        linear-gradient(217deg, rgba(255, 100, 200, 0.4), rgba(255, 100, 200, 0) 70.71%),
+        linear-gradient(127deg, rgba(140, 0, 255, 0.3), rgba(140, 0, 255, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 255, 200, 0.2), rgba(0, 255, 200, 0) 70.71%);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#about-container::-webkit-scrollbar {
+    width: 0;
+}
+
+#about-title-container {
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    padding-top: 1rem;
+}
+
+#about-body-container {
+    width: 40rem;
+    line-height: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+    padding-top: 1rem;
 }

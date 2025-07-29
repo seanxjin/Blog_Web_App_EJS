@@ -117,6 +117,14 @@ app.post("/edit", async (req, res) => {
     res.redirect("/configure/" + id);
 });
 
+app.get("/mission", (req, res) => {
+    res.render("mission.ejs");
+});
+
+app.get("/about", (req, res) => {
+    res.render("about.ejs");
+});
+
 app.listen(port, () => {
     console.log("Listening on port: " + port);
 });
