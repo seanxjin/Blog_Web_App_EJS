@@ -3,7 +3,7 @@
 Bloggo is a simple blogging platform built with Node.js, Express, and PostgreSQL. It's designed to be minimal, distraction-free, and easy to use—whether you're journaling, sharing ideas, or just playing around with web development.
 
 # 📌 Project Description
-The goal of this capstone project is to create a fully functional blog web app that demonstrates fundamental web development skills using Node.js and Express.js for the backend and EJS for the templating engine. The application does not use a database in this version — all blog posts are held in memory while the server is running. Emphasis is placed on both functionality and responsive design.
+The goal of this capstone project is to create a fully functional blog web app that demonstrates fundamental web development skills using Node.js and Express.js for the backend and EJS for the templating engine. The application does use a database in this version — all blog posts are saved to a database while the server is running.
 
 This project is inspired by the style and layout of <a href="https://www.paulgraham.com/articles.html">Paul Graham's articles.</a>
 
